@@ -1,0 +1,24 @@
+﻿<Window x:Class="TestTaskDeeplayWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTaskDeeplayWpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="469" Width="800">
+    <Grid Margin="0,0,0,4">
+        <Button Content="Удалить работника" HorizontalAlignment="Left" Margin="556,225,0,0" VerticalAlignment="Top" Height="208" Width="244" Click="DeleteButton_Click"/>
+        <DataGrid x:Name="StaffGrid" Margin="0,0,0,225" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding FIO}" Header="ФИО" Width="100"/>
+                <DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Дата рождения" Width="110"/>
+                <DataGridTextColumn Binding="{Binding Gender}" Header="Пол" Width="70"/>
+                <DataGridTextColumn Binding="{Binding Post}" Header="Должность" Width="80"/>
+                <DataGridTextColumn Binding="{Binding UniqueInfo}" Header="Уникальная информация" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить работника" HorizontalAlignment="Left" Margin="181,225,0,0" VerticalAlignment="Top" Width="195" Click="AddButton_Click" Height="208"/>
+        <Button Content="Обновить таблицу" HorizontalAlignment="Left" Margin="0,225,0,0" VerticalAlignment="Top" Click="UpdateButton_Click" Height="208" Width="176"/>
+        <Button Content="Повысить" HorizontalAlignment="Left" Margin="381,225,0,0" VerticalAlignment="Top" Width="170" Click="BoostButton_Click" Height="208"/>
+    </Grid>
+</Window>
